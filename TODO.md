@@ -1,6 +1,12 @@
-# TODO
+# TODO 1.0
 ## Bugfixes
 - Done!
+## Systems
+- Exit modal
+- Backup autosaves
+- Autosaving (configurable)
+
+# WISHLIST
 ## Changes
 - When https://github.com/godotengine/godot-proposals/issues/3050 is fixed, rebind Tab
 - F2 to rename
@@ -14,5 +20,5 @@
 - Mobile support
 - Shortcuts, shortcut manager
 - Undo/redo
-- help window (some sort of tutorial)
+- Help window (some sort of tutorial)
 - Documentation (json schema especially)
