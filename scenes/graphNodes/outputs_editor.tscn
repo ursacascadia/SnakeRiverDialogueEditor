@@ -18,12 +18,14 @@ horizontal_alignment = 1
 
 [node name="Minus" type="Button" parent="."]
 layout_mode = 2
+focus_mode = 1
 text = " "
 icon = ExtResource("2_fcq68")
 icon_alignment = 1
 
 [node name="Plus" type="Button" parent="."]
 layout_mode = 2
+focus_mode = 1
 text = " "
 icon = ExtResource("3_ilmqp")
 icon_alignment = 1

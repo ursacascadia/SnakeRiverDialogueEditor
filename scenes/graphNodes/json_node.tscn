@@ -39,6 +39,7 @@ layout_mode = 2
 
 [node name="MenuButton" type="Button" parent="Properties/Options" node_paths=PackedStringArray("popup")]
 layout_mode = 2
+focus_mode = 1
 action_mode = 0
 icon = ExtResource("2_nlsva")
 script = ExtResource("3_kmojc")
@@ -55,6 +56,7 @@ text = "Fields"
 [node name="AddFieldButton" type="Button" parent="Properties/Options/Fields"]
 layout_mode = 2
 size_flags_horizontal = 10
+focus_mode = 1
 text = "Field"
 icon = ExtResource("2_4r1s2")
 alignment = 0

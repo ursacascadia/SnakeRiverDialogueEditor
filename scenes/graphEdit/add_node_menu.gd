@@ -1,7 +1,6 @@
 extends PopupMenu
 
 @export var json_flow_node: PackedScene = preload("res://scenes/graphNodes/json_node.tscn")
-@export var template_picker: PackedScene = preload("res://scenes/templateRegistry/template_picker.tscn")
 
 @onready var graph_edit = get_parent()
 
@@ -34,6 +33,13 @@ func reload_templates():
 		templates_submenu.add_item(template)
 		submenu_callables.append(graph_edit.add_node.bind(
 			Globals.template_registry.get_template_data(template),template,graph_edit.make_canvas_position_local(position)))
+
+func popup_submenu(new_position):
+	position = new_position
+	templates_submenu.position = new_position
+	reload_templates()
+	templates_submenu.size = Vector2(0,0)
+	templates_submenu.popup()
 
 func add_json_flow_node_clicked():
 	graph_edit.add_node({},"",graph_edit.make_canvas_position_local(position))

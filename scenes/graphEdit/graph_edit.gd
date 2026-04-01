@@ -2,6 +2,8 @@ extends GraphEdit
 
 @export var json_flow_node: PackedScene = preload("res://scenes/graphNodes/json_node.tscn")
 
+signal node_added(new_node)
+
 func _ready():
 	Locator.graph_edit = self
 	connection_request.connect(_on_connection_request)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bi4efwsssx38i"]
+[gd_scene load_steps=8 format=3 uid="uid://bi4efwsssx38i"]
 
 [ext_resource type="Script" uid="uid://bhd47nkn5rmqy" path="res://scenes/editor/menu_bar.gd" id="1_1v1ex"]
 [ext_resource type="Theme" uid="uid://cdk3q0vg4tudp" path="res://themes/theme.tres" id="1_3c13b"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://8gi8dkj8erw3" path="res://scenes/graphEdit/graph_edit.gd" id="1_v4xje"]
 [ext_resource type="PackedScene" uid="uid://c0bq3p1q5oxwj" path="res://scenes/toasts/toasts.tscn" id="2_jkc8f"]
 [ext_resource type="Script" uid="uid://c1hkif44o1rng" path="res://scenes/graphEdit/add_node_menu.gd" id="2_rxfvf"]
+[ext_resource type="Script" uid="uid://btpn6x7lqphim" path="res://scenes/editor/shortcuts.gd" id="6_uqg4n"]
 
 [node name="Editor" type="Control"]
 layout_mode = 3
@@ -43,6 +44,10 @@ popup = NodePath("../AddNodeMenu")
 
 [node name="AddNodeMenu" type="PopupMenu" parent="VBoxContainer/GraphEdit"]
 script = ExtResource("2_rxfvf")
+
+[node name="Shortcuts" type="Node" parent="VBoxContainer/GraphEdit" node_paths=PackedStringArray("add_node_menu")]
+script = ExtResource("6_uqg4n")
+add_node_menu = NodePath("../AddNodeMenu")
 
 [node name="Toasts" parent="." instance=ExtResource("2_jkc8f")]
 layout_mode = 1
